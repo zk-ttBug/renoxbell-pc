@@ -4,7 +4,7 @@ module.exports = function () {
         type = 'cn';
     }
     $.ajax({
-        url: NET.SERVER + 'getProjectList',
+        url: NET.SERVER + 'getFactoryList',
         type: 'GET',
         data: {
             type: type
