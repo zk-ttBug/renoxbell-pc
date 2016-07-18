@@ -78,6 +78,71 @@
         });
 	}
 
+    function bindEvent(data){
+        $('#fbbtn').bind('click',function(){
+            shareFb({
+                "link": location.href,
+                "text": data.name,
+                "content": data.desc,
+                "picture": data["image" + 0]
+            }, {
+                "appId": '319966315057697',
+                "fbUrl": "https://www.facebook.com/dialog/feed",
+                "callback": location.href,
+                "host": 'http://renoxbell.com'
+            });
+        });
+        $('#twbtn').bind('click',function(){
+            shareTw({
+                "link":  location.href,
+                "content": data.name
+            },{
+                "twUrl": "https://twitter.com/intent/tweet?"
+            })
+        });
+    }
+
+    function shareTw(opt, config) {
+        var setting = {
+            text: opt.content + '(' + opt.link + ')'
+        }
+        var twUrl = config.twUrl;
+        var shareTW = param(setting, twUrl);
+        location.href = shareTW;
+    }
+
+    function shareFb(opt, config) {
+        var setting = {};
+        setting.link = opt.link || location.protocol + "//www.renoxbell.com";
+        setting.name = opt.text || "renoxbell.com";
+        setting.description = opt.content || "";
+        setting.callback = opt.callback || "";
+        setting.app_id = config.appId || ""; // 1663629903854919
+        if (opt.picture) {
+            setting.picture = opt.picture;
+        }
+        setting.redirect_uri = config.host;
+        var fbUrl = config.fbUrl || location.protocol + "//www.facebook.com/dialog/feed";
+        var shareUrl = param(setting, fbUrl);
+        location.href = shareUrl;
+    }
+
+
+    function param(data, appendTo) {
+        var stack = [],
+            query;
+
+        for (var key in data) {
+            stack.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+        }
+        query = stack.join('&').replace(/%20/g, '+');
+        if (typeof appendTo === 'string') {
+            query = appendTo + (query.length > 0 ?
+                (appendTo.indexOf('?') < 0 ? '?' : '&') + query : '');
+        }
+        return query;
+    }
+
 	function getProductDetail() {
         $.ajax({
             url: NET.SERVER + 'getProductDetail',
@@ -147,7 +212,7 @@
                     }
 
                     $("#detailPanel").html(prodcutDetailImgsHTML);
-
+                    bindEvent(data);
                     init();
                 } else {
                     console.log('get product detail status error!');
@@ -160,4 +225,5 @@
 	}
 
 	getProductDetail();
+
 })();

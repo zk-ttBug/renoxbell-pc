@@ -8,7 +8,6 @@
 .detail-content2 {
     width:1142px;
     position: relative;
-    height: 1300px;
     margin: 0 auto;
     padding-bottom: 300px;
 }
@@ -71,6 +70,7 @@
     height: 40px;
     float:left;
     margin-left: 14px;
+    cursor: pointer;
 }
 .detail-btn img{
     width: 40px;
@@ -80,7 +80,6 @@
 .detail-bg-png{
     margin-top: 30px;
     width: 1142px;
-    height: 510px;
     border: 1px solid #eeeeee;
 }
 .detail-bg-png img{
