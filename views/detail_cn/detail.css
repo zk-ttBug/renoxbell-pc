@@ -8,9 +8,8 @@
 .detail-content2 {
     width:1142px;
     position: relative;
-    height: 1300px;
     margin: 0 auto;
-    padding-bottom: 300px;
+    padding-bottom: 100px;
 }
 
 .detail-prd-wrap {
@@ -71,6 +70,7 @@
     height: 40px;
     float:left;
     margin-left: 14px;
+    cursor: pointer;
 }
 .detail-btn img{
     width: 40px;
