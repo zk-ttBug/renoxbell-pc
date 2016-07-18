@@ -137,8 +137,8 @@
     function bannerTmpl(items){
         var itemsArr = [];
         for(var i = 0; i < items.length;i++){
-            itemsArr.push('<li>');
-            itemsArr.push('<img src="'+items[i].image+'" style="width: 100%;min-height: 338px;height: 338px" />');
+            itemsArr.push('<li class="banner-items">');
+            itemsArr.push('<img src="'+items[i].image+'"/>');
             itemsArr.push('</li>');
         }
         var itemsStr = itemsArr.join('');
