@@ -37,7 +37,7 @@
             url: NET.SERVER + 'getProductList',
             type:'GET',
             data: {
-                type: "en",
+                type: "cn",
                 category: type
             },
             success: function(resp) {
