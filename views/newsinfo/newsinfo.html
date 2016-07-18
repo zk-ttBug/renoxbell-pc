@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="newsinfo.css">
+
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head"}}}
+
+<section id="newsinfoDetail" class="newsinfo-wrap">
+   <!--<div class="newsinfo-title">China Finishes Construction of World’s Largest Radio Telescope</div>-->
+    <!--<div class="newsinfo-date">Jul 03,2016</div>-->
+    <!--<div class="newsinfo-text">-->
+        <!--<p>After more than five years of construction, the world’s largest single-dish radio telescope is finally getting ready to open its eye. On July 3, 2016, with the installation of the last of its 4,450 reflecting panels – equivalent to the size of 30 soccer fields – the Five-hundred-meter Aperture Spherical radio Telescope (FAST) is counting down to seeing its first light in two to three months’ time.-->
+
+            <!--“FAST will enable Chinese astronomers to jump-start many scientific goals, such as surveying the neutral hydrogen in the Milky Way, detecting faint pulsars, and listening to possible signals from other civilizations,” said NAN Rendong, the general engineer and chief scientist of FAST.-->
+            <!--“It’s time for China to have its own big telescope,” NAN said.-->
+            <!--In the next couple of months, the FAST team will focus on testing and debugging to make the telescope work, said WANG Qiming, head of the reflector system and general technologist for the project. The official completion date is set for late September, and the telescope’s first data are expected around the same time. </p>-->
+    <!--</div>-->
+</section>
+
+{{{unit name="foo"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="newsinfo.js"></script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js'
+    ], function (head){
+        head();
+    });
+</script>
+</body>
+</html>

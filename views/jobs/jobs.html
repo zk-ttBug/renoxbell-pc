@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head" data="data-jobs"}}}
+<!--start-error-->
+<div class="error">
+    <div class="container">
+        <div class="error-main">
+            <p>oops!-could not find it</p>
+
+            <h1>4<span>0</span>4</h1>
+
+            <div class="err-bttn">
+                <a href="index.html">Back to home</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-error-->
+{{{unit name="foo"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+</script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js'
+    ], function (head){
+        head();
+    });
+</script>
+<!--<script type="text/javascript" src="index.js"></script>-->
+</body>
+</html>

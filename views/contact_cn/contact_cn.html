@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head" data="data-contract-cn"}}}
+<!--start-contact-->
+<div class="contact">
+    <div class="container">
+        <div class="contact-top">
+            <h3>联系我们</h3>
+        </div>
+        <div id="map" class="mp" style="height: 400px">
+        </div>
+        <div class="contact-bottom">
+            <div class="col-md-5 contact-bottom-left">
+                <h3>联系详情：</h3>
+
+                <p>总部: 中国广东省广州市海珠区广州市288大道经典居大厦1408</p>
+
+                <p>电话: 0086-20-61275739
+                    <span>传真:传真</span>
+                    邮箱: <a href="mailto:info@example.com">mail@user.com</a>
+                </p>
+            </div>
+            <div class="col-md-7 contact-bottom-right">
+                <h3>Get in touch</h3>
+
+                <div class="contact-text">
+                    <input id="nickName" type="text" value="名称" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = '名称';}"/>
+                    <input id="email" type="text" value="邮件地址" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = '邮件地址';}"/>
+                </div>
+                <div class="contact-textarea">
+                    <textarea id="content" value="消息" onfocus="this.value = '';"
+                              onblur="if (this.value == '') {this.value = '消息';}">Message..</textarea>
+                </div>
+                <div class="contact-but">
+                    <input id="submitContactBtn" type="submit" value="提交"/>
+                    <!--<input type="submit"/>-->
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--end-contact-->
+{{{unit name="foo" data="data-cn"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script type="text/javascript" src="./contact.js"></script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+
+
+    var map;
+    function initMap() {
+        var myLatLng = {lat: 23.10123, lng: 113.3125219};
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 16
+        });
+
+        var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            title: '经典居'
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content:'中国广东省广州市海珠区广州市288大道经典居大厦1408',
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7g5yUq5AbgLpuMdr2MclAaQHdgyUnxaQ&callback=initMap">
+</script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js'
+    ], function (head) {
+        head();
+    });
+</script>
+<!--<script type="text/javascript" src="index.js"></script>-->
+</body>
+</html>

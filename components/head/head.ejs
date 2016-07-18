@@ -1,0 +1,30 @@
+<div class="header nav" id="home">
+    <div class="container">
+        <div class="logo">
+            <a href="/"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <div class="head-change">
+            <span class="head-lang"><%=lan%>:</span>
+            <span class="head-choice">
+                <%=current%> <i class="fa fa-angle-down" id="change-lan"></i>
+                <div class="head-choice-item hide" dataUrl="<%=url%>"><%=choice%></div>
+            </span>
+
+        </div>
+        <nav class="top-nav">
+            <ul class="top-nav">
+               <% navi.forEach(function(val){ %>
+                <li>
+                    <a href="<%= val.href%>"
+                       class="<%= val.cls%>"
+                       data-name="<%= val.key%>">
+                        <%= val.label%>
+                    </a>
+                </li>
+                <% }); %>
+            </ul>
+            <a href="javascript:void(0)" id="pull"><img src="./img/menu-icon.png" title="menu"/></a>
+        </nav>
+        <div class="clearfix"></div>
+    </div>
+</div>

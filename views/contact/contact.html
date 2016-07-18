@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head" data="data-contract"}}}
+<!--start-contact-->
+<div class="contact">
+    <div class="container">
+        <div class="contact-top">
+            <h3>Contact Us</h3>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</p>
+        </div>
+        <div id="map" class="mp" style="height: 400px">
+            <!--<iframe src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+of+Westminster,+United+Kingdom&amp;aq=0&amp;oq=westmi&amp;sll=51.50917,-0.245132&amp;sspn=0.311545,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=City+of+Westminster,+Greater+London,+United+Kingdom&amp;ll=51.483521,-0.082054&amp;spn=0.155803,0.41851&amp;t=m&amp;z=12&amp;output=embed"></iframe>-->
+        </div>
+        <div class="contact-bottom">
+            <div class="col-md-5 contact-bottom-left">
+                <h3>Contact Information</h3>
+
+                <p>In pharetra dui vitae odio maximus vulputate. Nulam finibus dui more neque dui vitae odio maximu.In
+                    pharetra dui vitae odio maximus vulputate. Nullfinibus dui more neque.odio maximus vulputate. Nulla
+                    odio maximus vulputate. Nulla odio maxi.</p>
+                <h6>The Company Name agi.
+                    <span>756 gt globel Place,</span>
+                    CD-Road,M 07 435.
+                </h6>
+
+                <p>Telephone: +1 234 567 9871
+                    <span>FAX: +1 234 567 9871</span>
+                    E-mail: <a href="mailto:info@example.com">mail@user.com</a>
+                </p>
+            </div>
+            <div class="col-md-7 contact-bottom-right">
+                <h3>Get in touch</h3>
+
+                <div class="contact-text">
+                    <input id="nickName" type="text" value="First Name" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'First Name';}"/>
+                    <input id="email" type="text" value="Email Id" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Email Id';}"/>
+                </div>
+                <div class="contact-textarea">
+                    <textarea id="content" value="Message:" onfocus="this.value = '';"
+                              onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+                </div>
+                <div class="contact-but">
+                    <input id="submitContactBtn" type="submit" value="submit" />
+                    <!--<input type="submit"/>-->
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--end-contact-->
+{{{unit name="foo"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script type="text/javascript" src="./contact.js"></script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+
+    var map;
+    function initMap() {
+        var myLatLng = {lat: 23.10123, lng: 113.3125219};
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 16
+        });
+
+        var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            title: '经典居'
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content:'Headquarter: RM1408, jingdianju Building, No.288 Guangzhou Ave. South, Haizhu District, Guangond Province, Guangzhou City, China',
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+
+//    var map = new GMaps({
+//        div: '#map',
+//        lat: 23.100955,
+//        lng: 113.3131023
+//    });
+//
+//    map.addMarker({
+//        lat: 23.100955,
+//        lng: 113.3131023,
+//        title: '经典居',
+//        infoWindow: {
+//            content: 'Headquarter: RM1408, jingdianju Building, No.288 Guangzhou Ave. South, Haizhu District, Guangond Province, Guangzhou City, China' }
+//    });
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7g5yUq5AbgLpuMdr2MclAaQHdgyUnxaQ&callback=initMap">
+</script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js'
+    ], function (head){
+        head();
+    });
+</script>
+<!--<script type="text/javascript" src="index.js"></script>-->
+</body>
+</html>

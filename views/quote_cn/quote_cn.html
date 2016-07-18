@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head" data="data-quote_cn"}}}
+<!--start-get-->
+<div class="get">
+    <div class="container">
+        <div class="get-main">
+            <h3>询价</h3>
+        </div>
+        <div class="get-bottom">
+            <div class="col-md-7 get-bottom-left">
+                <label>用户名</label>
+                <input id="nickName" type="text" value="" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = '';}"/>
+                <label>电子邮箱</label>
+                <input id="email" type="text" value="" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = '';}"/>
+                <label>电话</label>
+                <input id="phone" type="text" value="" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = '';}"/>
+                <label>公司</label>
+                <input id="company" type="text" value="" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = '';}"/>
+                <label>简要描述</label>
+                <textarea id="content" value="" onfocus="this.value = '';"
+                          onblur="if (this.value == '') {this.value = '';}"> </textarea>
+
+                <div class="get-btn">
+                    <input id="submitContactBtn" type="submit" value="提交"/>
+                </div>
+            </div>
+            <!--<div class="col-md-5 get-bottom-right">-->
+                <!--<div class="get-btm-top">-->
+                    <!--<h4>What you get</h4>-->
+                    <!--<ul>-->
+                        <!--<li><a href="#">Fusce<span>feugiat</span> malesuada odio orbi nunc odio gravida.</a></li>-->
+                        <!--<li><a href="#">Bulum iaculis<span> lacinia</span> est. Proin dictum elemntum velit.</a></li>-->
+                        <!--<li><a href="#">Duis<span> ultricies</span> pharetra magna onec accumsan malesuada orci</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="get-btm-top">-->
+                    <!--<h4>Your privacy</h4>-->
+
+                    <!--<div class="get-btm-one">-->
+                        <!--<div class="get-lock">-->
+                            <!--<img src="../lib/images/lock.png" alt=""/>-->
+                        <!--</div>-->
+                        <!--<div class="get-text">-->
+                            <!--<p>Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,-->
+                                <!--placerat eget elit.. Praesent faucibus rutrum odio at rhoncus.</p>-->
+                        <!--</div>-->
+                        <!--<div class="clearfix"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--end-quote-->
+{{{unit name="foo"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script type="text/javascript" src="./quote.js"></script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+</script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js'
+    ], function (head){
+        head();
+    });
+</script>
+<!--<script type="text/javascript" src="index.js"></script>-->
+</body>
+</html>

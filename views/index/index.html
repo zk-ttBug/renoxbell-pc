@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>雷诺贝尔铝业有限公司|renoxbell.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../lib/base/base.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/chocolat.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/google.fonts.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/plugins/css/popup-box.css">
+    <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <!--[STYLES]-->
+</head>
+<body>
+{{{unit name="head"}}}
+<div class="banner  banner-wap" style="background-color: #44AEFA">
+    <div id="top-banner" class="callbacks_container">
+        <ul class="rslides" id="slider4">
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="build">
+</div>
+<!--End-build-->
+{{{unit name="products"}}}
+{{{unit name="works"}}}
+{{{unit name="projects"}}}
+{{{unit name="news"}}}
+{{{unit name="media"}}}
+{{{unit name="foo"}}}
+
+<script type="text/javascript" src="../lib/scrat.js"></script>
+<script src="../lib/anchor.js?__inline"></script>
+<script type="text/javascript" src="../lib/core/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/easing.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.chocolat.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/move-top.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/owl.carousel.js"></script>
+<script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="../config/net.js"></script>
+<script>
+
+    // var ua = navigator.userAgent.toLowerCase();
+    // if (/iphone/.test(ua)) {
+    //     location.replace('http://47.90.22.170:7700/#!/index')
+    // } else if (/android/.test(ua)) {
+    //     location.replace('http://47.90.22.170:7700/#!/index')
+    // }
+
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+
+
+    $(function () {
+        var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+        $(window).resize(function () {
+            var w = $(window).width();
+            if (w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+
+    $(function () {
+//        $('#example1 a').Chocolat();
+    });
+
+    $.ajax({
+        url: NET.SERVER + 'getBannerList',
+        type:'GET',
+        success:function(data){
+            if(data.status === 'success'){
+                var items = data.data.list;
+                var bannerStr = bannerTmpl(items);
+                $('#slider4').html(bannerStr);
+                $(function () {
+                    // Slideshow 4
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: false,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function (obj) {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function (obj) {
+                            $('.events').append("<li>after event fired.</li>");
+                            if(obj === 0 ){
+                                //$('.banner-wap').css('background-color','#52BCFA')
+                            }else if(obj === 1){
+                                // $('.banner-wap').css('background-color','#6DC6FE')
+                            }else{
+                                // $('.banner-wap').css('background-color','#0D181E')
+                            }
+                        }
+                    });
+                });
+            }else{
+                console.log('banner list status error!')
+            }
+        },
+        fail:function(e){
+            console.log('banner list ajax error!')
+        }
+    })
+
+    // You can also use "$(window).load(function() {"
+
+    function bannerTmpl(items){
+        var itemsArr = [];
+        for(var i = 0; i < items.length;i++){
+            itemsArr.push('<li>');
+            itemsArr.push('<img src="'+items[i].image+'" style="width: 100%;min-height: 338px;height: 338px" />');
+            itemsArr.push('</li>');
+        }
+        var itemsStr = itemsArr.join('');
+        return itemsStr;
+    }
+
+
+    // $(function () {
+    //     // Slideshow 4
+    //     $("#slider5").responsiveSlides({
+    //         auto: true,
+    //         pager: true,
+    //         nav: true,
+    //         speed: 500,
+    //         namespace: "callbacks",
+    //         before: function () {
+    //             $('.events').append("<li>before event fired.</li>");
+    //         },
+    //         after: function () {
+    //             $('.events').append("<li>after event fired.</li>");
+    //         }
+    //     });
+
+    // });
+
+
+    // $(document).ready(function () {
+        
+    // });
+
+    // $(document).ready(function () {
+    //     $("#owl-projects").owlCarousel({
+    //         items: 5,
+    //         lazyLoad: true,
+    //         autoPlay: true,
+    //         pagination: false,
+    //     });
+    // });
+
+
+    $(function () {
+        // Slideshow 4
+        $("#slider6").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!--[SCRIPTS]-->
+<script>
+    /**
+     *@require /components/head/head.js
+     */
+    require.async([
+        'components/head/head.js',
+        'components/news/news.js',
+        'components/media/media.js',
+        'components/works/works.js',
+        'components/projects/projects.js',
+        'components/products/products.js',
+        'components/foo/foo.js'
+    ], function (head,news,media,works,projects,prodcuts,foo) {
+        head();
+        news();
+        media();
+        works();
+        projects();
+        prodcuts();
+        foo();
+    });
+</script>
+<!--<script type="text/javascript" src="index.js"></script>-->
+</body>
+</html>
