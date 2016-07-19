@@ -83,6 +83,5 @@
     border: 1px solid #eeeeee;
 }
 .detail-bg-png img{
-    width: 1138px;
-    height: 510px;
+    width: 100%;
 }

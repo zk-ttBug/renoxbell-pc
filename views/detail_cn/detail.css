@@ -2,7 +2,6 @@
     width:1142px;
     padding: 74px 0px;
     position: relative;
-    height: 580px;
     margin: 0 auto;
 }
 .detail-content2 {
@@ -80,10 +79,8 @@
 .detail-bg-png{
     margin-top: 30px;
     width: 1142px;
-    height: 510px;
     border: 1px solid #eeeeee;
 }
 .detail-bg-png img{
-    width: 1138px;
-    height: 510px;
+    width: 100%;
 }
