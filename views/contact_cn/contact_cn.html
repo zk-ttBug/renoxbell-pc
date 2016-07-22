@@ -76,6 +76,7 @@
 <script type="text/javascript" src="../lib/plugins/js/responsiveslides.min.js"></script>
 <script type="text/javascript" src="../config/net.js"></script>
 <script type="text/javascript" src="./contact.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xmYhEaDjHZrY2o8IK5WYYXHGfAnuq6yY"></script>
 <script>
     addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
@@ -106,29 +107,14 @@
             }
         });
     });
+    var map = new BMap.Map("map");          // 创建地图实例
+    var point = new BMap.Point(113.321122,23.107192);  // 创建点坐标
+    map.centerAndZoom(point, 30);                 // 初始化地图，设置中心点坐标和地图级别
 
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);               // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 
-    var map;
-    function initMap() {
-        var myLatLng = {lat: 23.10123, lng: 113.3125219};
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: myLatLng,
-            zoom: 16
-        });
-
-        var marker = new google.maps.Marker({
-            map: map,
-            position: myLatLng,
-            title: '经典居'
-        });
-
-        var infowindow = new google.maps.InfoWindow({
-            content:'中国广东省广州市海珠区广州市288大道经典居大厦1408',
-        });
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
-    }
 
 </script>
 <script async defer
