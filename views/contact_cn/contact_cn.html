@@ -64,6 +64,7 @@
 </div>
 <!--end-contact-->
 {{{unit name="foo" data="data-cn"}}}
+{{{unit name="qq"}}}
 
 <script type="text/javascript" src="../lib/scrat.js"></script>
 <script src="../lib/anchor.js?__inline"></script>
@@ -126,9 +127,11 @@
      *@require /components/head/head.js
      */
     require.async([
-        'components/head/head.js'
-    ], function (head) {
+        'components/head/head.js',
+        'components/qq/qq.js'
+    ], function (head,qq) {
         head();
+        qq();
     });
 </script>
 <!--<script type="text/javascript" src="index.js"></script>-->
