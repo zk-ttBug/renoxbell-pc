@@ -100,6 +100,9 @@
                 "twUrl": "https://twitter.com/intent/tweet?"
             })
         });
+        $('#more-btn').bind('click',function(){
+            location.href='/procenter.html';
+        })
     }
 
     function shareTw(opt, config) {

@@ -33,10 +33,8 @@
     font-size: 16px;
     color: #999;
     text-overflow: -o-ellipsis-lastline;
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -83,4 +81,19 @@
 }
 .detail-bg-png img{
     width: 100%;
+}
+
+
+.more-btn{
+    width: 200px;
+    color: white;
+    background-color: #ff7514;
+    -webkit-border-radius: 20px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
 }
