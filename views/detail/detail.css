@@ -37,6 +37,8 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    height: 100px;
+    overflow-y: scroll;
 }
 
 .detail-line{
