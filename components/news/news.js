@@ -38,6 +38,7 @@ function newsTempl(items,type){
     for(var i = 0;i<items.length;i++){
         var data = items[i];
         newsarr.push('<a href="'+url+'?id='+data.id+'" class="news-item">');
+        newsarr.push('<img class="news-img" src="'+data.bannerImage+'" />');
         newsarr.push('<div class="news-title">'+data.title+'</div>');
         newsarr.push("<div class='news-content-info'>"+data.desc+"</div>");
         newsarr.push('</a>');
