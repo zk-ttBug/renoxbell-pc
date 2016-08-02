@@ -51,7 +51,7 @@
                             if (j < len) {
                                 productHTML += '<div class="pro-list-item">' +
                                     '<a href="/detail_cn.html?productId=' + item.id + '">' +
-                                        '<img src="' + item.image1 + '">' +
+                                        '<img src="' + item.imagesThumb[0] + '">' +
                                         '<div class="pro-name">' + item.name + '</div>' +
                                     '</a>' + 
                                 '</div>';

@@ -158,11 +158,11 @@
                 if (resp.status === 'success') {
                 	var data = resp.data;
                 	var productDetailHTML = "";
-                	for (var i = 1; i <= 4; ++i) {
-                        if (data["image" + i] && data["image" + i + "Thumb"]) {
+                	for (var i = 0; i < data.imagesThumb.length; ++i) {
+                        if (data.images && data.imagesThumb) {
                             productDetailHTML += '<div data-p="144.50" style="display: none;">' +
-                                '<img data-u="image" src="' + data["image" + i] + '" />' +
-                                '<img data-u="thumb" src="' + data["image" + i + "Thumb"] + '" />' +
+                                '<img data-u="image" src="' + data.images[i] + '" />' +
+                                '<img data-u="thumb" src="' + data.imagesThumb[i] + '" />' +
                             '</div>';
                         }
                 	}
@@ -206,12 +206,10 @@
 
                     var prodcutDetailImgsHTML = "";
 
-                    for (var i = 1; i <= 5; ++i) {
-                        if (data["detailImage" + i]) {
+                    for (var k = 0; k < data.detailImages.length; ++k) {
                             prodcutDetailImgsHTML += '<div class="detail-bg-png">' +
-                                '<img src="' + data["detailImage" + i] + '">' +
+                                '<img src="' + data.detailImages[k] + '">' +
                             '</div>';
-                        }
                     }
 
                     $("#detailPanel").html(prodcutDetailImgsHTML);

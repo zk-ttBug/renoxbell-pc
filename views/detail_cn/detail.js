@@ -146,7 +146,7 @@
         return query;
     }
 
-	function getProductDetail() {
+    function getProductDetail() {
         $.ajax({
             url: NET.SERVER + 'getProductDetail',
             type:'GET',
@@ -156,17 +156,17 @@
             },
             success: function(resp) {
                 if (resp.status === 'success') {
-                	var data = resp.data;
-                	var productDetailHTML = "";
-                	for (var i = 1; i <= 4; ++i) {
-                        if (data["image" + i] && data["image" + i + "Thumb"]) {
-                    		productDetailHTML += '<div data-p="144.50" style="display: none;">' +
-    		                    '<img data-u="image" src="' + data["image" + i] + '" />' +
-    		                    '<img data-u="thumb" src="' + data["image" + i + "Thumb"] + '" />' +
-    		                '</div>';
+                    var data = resp.data;
+                    var productDetailHTML = "";
+                    for (var i = 0; i < data.imagesThumb.length; ++i) {
+                        if (data.images && data.imagesThumb) {
+                            productDetailHTML += '<div data-p="144.50" style="display: none;">' +
+                                '<img data-u="image" src="' + data.images[i] + '" />' +
+                                '<img data-u="thumb" src="' + data.imagesThumb[i] + '" />' +
+                                '</div>';
                         }
-                	}
-                    $("#pdSlider").html(productDetailHTML);     
+                    }
+                    $("#pdSlider").html(productDetailHTML);
 
                     var projectDetailInfoHTML = "";
                     projectDetailInfoHTML += '<div class="detail-title">' + data.name + '</div>';
@@ -174,17 +174,17 @@
 
                     if (data.spaces) {
                         projectDetailInfoHTML += '<div class="detail-line" style="margin-top: 34px">' +
-                                                '<span class="detail-li-title">SPAECS</span>';
+                            '<span class="detail-li-title">SPAECS</span>';
                         var spaces = data.spaces.split(",");
                         for (var i = 0; i < spaces.length; ++i) {
                             projectDetailInfoHTML += '<span class="detail-size">' + spaces[i] + '</span>';
                         }
                         projectDetailInfoHTML += '</div>';
                     }
-                    
+
                     if (data.model) {
                         projectDetailInfoHTML += '<div class="detail-line" style="margin-top: 34px">' +
-                                                '<span class="detail-li-title">MODEL</span>';
+                            '<span class="detail-li-title">MODEL</span>';
                         var model = data.model.split(",");
                         for (var i = 0; i < model.length; ++i) {
                             projectDetailInfoHTML += '<span class="detail-size">' + model[i] + '</span>';
@@ -194,7 +194,7 @@
 
                     if (data.nw) {
                         projectDetailInfoHTML += '<div class="detail-line" style="margin-top: 34px">' +
-                                                '<span class="detail-li-title">N.W</span>';
+                            '<span class="detail-li-title">N.W</span>';
                         var nw = data.nw.split(",");
                         for (var i = 0; i < nw.length; ++i) {
                             projectDetailInfoHTML += '<span class="detail-size">' + nw[i] + '</span>';
@@ -202,16 +202,14 @@
                         projectDetailInfoHTML += '</div>';
                     }
 
-			       	$("#pdInfo").html(projectDetailInfoHTML);
+                    $("#pdInfo").html(projectDetailInfoHTML);
 
                     var prodcutDetailImgsHTML = "";
 
-                    for (var i = 1; i <= 5; ++i) {
-                        if (data["detailImage" + i]) {
-                            prodcutDetailImgsHTML += '<div class="detail-bg-png">' +
-                                '<img src="' + data["detailImage" + i] + '">' +
+                    for (var k = 0; k < data.detailImages.length; ++k) {
+                        prodcutDetailImgsHTML += '<div class="detail-bg-png">' +
+                            '<img src="' + data.detailImages[k] + '">' +
                             '</div>';
-                        }
                     }
 
                     $("#detailPanel").html(prodcutDetailImgsHTML);
@@ -221,11 +219,11 @@
                     console.log('get product detail status error!');
                 }
             },
-            fail: function(e) { 
+            fail: function(e) {
                 console.log('get product detail ajax error!');
             }
         });
-	}
+    }
 
 	getProductDetail();
 })();

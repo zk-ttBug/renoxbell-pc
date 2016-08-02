@@ -30,7 +30,7 @@ function productTmpl(list) {
         var item = list[i];
         productHTML += '<a class="col-md-3 design-left product-item" href="/detail.html?productId=' + item.id + '">' +
                 '<div class="design-text">' +
-                    '<img src="' + item.image1 + '" alt=""/>' +
+                    '<img src="' + item.imagesThumb[0] + '" alt=""/>' +
                 '</div>' +
             '</a>';
         }
