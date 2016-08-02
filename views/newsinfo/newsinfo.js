@@ -31,6 +31,7 @@ function getNewsInfoTempl(data){
     var newsArr = [];
     newsArr.push('<div class="newsinfo-title">'+data.title+'</div>');
     newsArr.push('<div class="newsinfo-date">'+data.last_modify+'</div>');
+    newsArr.push('<img class="newsinfo-img" style="width: 100%;margin-top: 10px" src="'+data.detailImage+'"/>');
     newsArr.push('<div class="newsinfo-text">');
     newsArr.push('<p>'+data.content+'</p>');
     newsArr.push('</div>');
