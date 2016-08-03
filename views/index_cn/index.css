@@ -2,3 +2,8 @@
     width: 320px;
     height: 226px;!important;
 }
+
+a:hover{text-decoration:none;}
+.new-title:hover{
+    color:#ff7514
+}
