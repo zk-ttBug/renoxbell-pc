@@ -70,7 +70,7 @@ function projectTmpl(list) {
                 '</div>' +
                 '<div class="col-md-6 work-right">' +
                     '<div class="work-mian">' +
-                        '<p>PROJECT NAME<span class="one">: ' + item.title + '</span></p>' +
+                        '<p>FACTORY NAME<span class="one">: ' + item.title + '</span></p>' +
                         '<p>LOCATION<span class="two">: ' + item.address + '</span></p>' +
                         '<p>OWNER<span class="tre">: ' + item.owner + '</span></p>' +
                         '<p>PROJECT START<span class="fvr">: ' + item.start_time + '</span></p>' +
