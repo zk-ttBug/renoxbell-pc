@@ -57,8 +57,13 @@
 
 .pro-name{
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     text-align: center;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow : hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .pro-bg{
