@@ -52,7 +52,7 @@
                                 productHTML += '<div class="pro-list-item">' +
                                     '<a href="/detail.html?productId=' + item.id + '">' +
                                         '<img src="' + item.imagesThumb[0] + '">' +
-                                        '<div class="pro-name">' + item.name + '</div>' +
+                                        '<div class="pro-name">' + item.name +'</div>' +
                                     '</a>' + 
                                 '</div>';
                             }
