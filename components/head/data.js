@@ -1,7 +1,7 @@
 module.exports = {
     lan:'language',
     current:'English',
-    choice:'Chinese',
+    choice:'中文',
     url:'/index_cn.html',
     navi: [
         {
