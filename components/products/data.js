@@ -18,6 +18,7 @@ module.exports = {
             title:'3D designs'
         }
     ],
+    productsUrl:'/procenter.html',
     //products2: [
     //    {
     //        img:'/s/uae/g/06/res/xinruilego/v/lib/images/product/pro5-min.png',
